@@ -78,7 +78,7 @@ chmod +x install.sh
 
 推奨モデル：
 
-- [Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3-4B) （推奨・安定版）
+- [Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B) （推奨・安定版）
 - [Qwen3.5-0.8B](https://huggingface.co/Qwen/Qwen3.5-0.8B) （軽量版）
 
 ### HuggingFace CLIを使用する場合
