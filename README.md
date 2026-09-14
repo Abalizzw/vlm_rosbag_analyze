@@ -1,7 +1,22 @@
 # VLM ROSBAG Analyze
 
 ROSBAG画像抽出・VLM自動アノテーション・検索システム
-[クイックスタート](##クイックスタート)コマンドはページの一番下にて参照
+
+## 目次
+
+- #概要
+- #動作環境
+- #プロジェクト構成
+- #セットアップ
+- #モデル配置
+  - [VLMのダウンロード(Qwen3.5)](#sbag配置
+- #初回起動確認
+- #起動方法
+- [主な機能
+  - #rosbag-extract
+  - [VLM Tagging
+  - [Search & View](#search #今後の予定
+- #クイックスタート
 
 ---
 
@@ -59,7 +74,7 @@ vlm_ros/
 ```bash
 git clone https://github.com/Abalizzw/vlm_rosbag_analyze.git
 
-cd vlm_ros
+cd vlm_ros_analyze
 ```
 
 インストールを実行します。
@@ -134,7 +149,7 @@ rosbags/
 単一の `.db3` ファイルまたは複数分割された `.db3` ファイルに対応しています。
 
 ---
-##初回起動確認
+## 初回起動確認
 ```bash
 source vlm_env/bin/activate
 python
@@ -268,14 +283,14 @@ RearRight
 - アノテーション精度向上
 - シーン検索機能強化
 
-## クイックスタート
+# クイックスタート
 
 ### 1. リポジトリ取得
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Abalizzw/vlm_rosbag_analyze.git
 
-cd vlm_ros
+cd vlm_ros_analyze
 ```
 
 ### 2. 環境構築
