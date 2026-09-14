@@ -55,7 +55,7 @@ vlm_ros/
 リポジトリを取得します。
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Abalizzw/vlm_rosbag_analyze.git
 
 cd vlm_ros
 ```
@@ -71,21 +71,49 @@ chmod +x install.sh
 ---
 
 ## モデル配置
+---
 
-以下のフォルダへVLMモデルを配置してください。
+## Qwenモデルのダウンロード
 
-```text
-models/
-
-└── Qwen3.5-4B
-```
-
-現在対応モデル
+推奨モデル：
 
 - Qwen3.5-4B
 - Qwen3.5-0.8B
 
-※ transformers の AutoProcessor / AutoModelForImageTextToText に対応しているモデルを推奨
+### HuggingFace CLIを使用する場合
+
+HuggingFace CLIをインストールしてください。
+
+```bash
+pip install -U "huggingface_hub[cli]"
+```
+
+### Qwen3.5-4B
+
+```bash
+hf download Qwen/Qwen2.5-VL-3B-Instruct \
+    --local-dir ./models/Qwen3.5-4B
+```
+
+### Qwen3.5-0.8B
+
+```bash
+hf download Qwen/Qwen2.5-VL-0.5B-Instruct \
+    --local-dir ./models/Qwen3.5-0.8B
+```
+
+ダウンロード後のフォルダ構成例：
+
+```text
+models/
+
+├── Qwen3.5-4B
+└── Qwen3.5-0.8B
+```
+
+### ローカルモデル確認
+
+アプリ起動後、TAG2「VLM Tagging」のモデル選択欄に表示されれば設定完了です。
 
 ---
 
