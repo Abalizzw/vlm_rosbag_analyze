@@ -139,6 +139,7 @@ models/
 ### ローカルモデル確認
 
 アプリ起動後、TAG2「VLM Tagging」のモデル選択欄に表示されれば設定完了です。
+![モデル選択](docs/TAG2_modelSelect.png)
 
 ---
 
