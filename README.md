@@ -194,6 +194,7 @@ RearLeft
 FrontRight
 RearRight
 ```
+![ROSBAG画像抽出](docs/TAG1_RosbagExtract.png)
 
 ---
 
@@ -204,6 +205,8 @@ RearRight
 - JSON出力
 - CSVデータベース生成
 - モデル選択機能
+![VLM自動タグ付け(処理中)](docs/TAG2_VLM_Annotation2.png)
+![VLM自動タグ付け(処理完了)](docs/TAG2_VLM_Annotation3.png)
 
 ---
 
@@ -227,6 +230,7 @@ RearRight
 急ブレーキ
 飛び出し注意
 ```
+![シーン検索・分析ビューア](docs/TAG3_SearchView.png)
 
 ---
 
