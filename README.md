@@ -15,7 +15,7 @@ ROSBAG画像抽出・VLM自動アノテーション・検索システム
 - シーン検索・閲覧
 - マルチカメラ対応（Front / Rear / FrontLeft / RearLeft / FrontRight / RearRight）
 
-!docs/system_architecture.png
+![ROSBAG画像自動アノテーション・検索システム](docs/system_architecture.png)
 
 ---
 
