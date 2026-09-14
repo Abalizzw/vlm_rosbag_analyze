@@ -46,7 +46,6 @@ vlm_ros/
 ├── models/
 ├── rosbags/
 ├── extracted_images/
-├── tmp/
 ```
 
 ---
