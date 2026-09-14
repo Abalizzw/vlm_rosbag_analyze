@@ -1,6 +1,7 @@
 # VLM ROSBAG Analyze
 
 ROSBAG画像抽出・VLM自動アノテーション・検索システム
+クイックスタートコマンドはページの一番下にて参照
 
 ---
 
@@ -73,12 +74,12 @@ chmod +x install.sh
 ## モデル配置
 ---
 
-## Qwenモデルのダウンロード
+## VLMのダウンロード(Qwen3.5)
 
 推奨モデル：
 
-- Qwen3.5-4B
-- Qwen3.5-0.8B
+- [Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3-4B) （推奨・安定版）
+- [Qwen3.5-0.8B](https://huggingface.co/Qwen/Qwen3.5-0.8B) （軽量版）
 
 ### HuggingFace CLIを使用する場合
 
@@ -87,18 +88,22 @@ HuggingFace CLIをインストールしてください。
 ```bash
 pip install -U "huggingface_hub[cli]"
 ```
+必要に応じてログイン
 
+```bash
+hf auth login
+```
 ### Qwen3.5-4B
 
 ```bash
-hf download Qwen/Qwen2.5-VL-3B-Instruct \
+hf download Qwen/Qwen3.5-4B \
     --local-dir ./models/Qwen3.5-4B
 ```
 
 ### Qwen3.5-0.8B
 
 ```bash
-hf download Qwen/Qwen2.5-VL-0.5B-Instruct \
+hf download Qwen/Qwen3.5-0.8B \
     --local-dir ./models/Qwen3.5-0.8B
 ```
 
@@ -128,6 +133,20 @@ rosbags/
 単一の `.db3` ファイルまたは複数分割された `.db3` ファイルに対応しています。
 
 ---
+##初回起動確認
+```bash
+source vlm_env/bin/activate
+python
+```
+次に
+```python
+import torch
+print(torch.cuda.is_available())
+```
+以下の内容がターミナルで出力されたら環境配置が正常である。
+```bash
+True
+```
 
 ## 起動方法
 
@@ -243,3 +262,54 @@ RearRight
 - マルチモデル投票機能
 - アノテーション精度向上
 - シーン検索機能強化
+
+## クイックスタート
+
+### 1. リポジトリ取得
+
+```bash
+git clone <repository_url>
+
+cd vlm_ros
+```
+
+### 2. 環境構築
+
+```bash
+chmod +x install.sh
+
+./install.sh
+```
+
+### 3. Qwenモデル配置
+
+推奨モデルを `models/` フォルダへ配置してください。
+
+```text
+models/
+
+├── Qwen3.5-4B
+└── Qwen3.5-0.8B
+```
+
+### 4. ROSBAG配置
+
+解析対象のROSBAGを `rosbags/` フォルダへ配置してください。
+
+```text
+rosbags/
+```
+
+### 5. アプリ起動
+
+```bash
+chmod +x run.sh
+
+./run.sh
+```
+
+ブラウザで以下へアクセスしてください。
+
+```text
+http://localhost:8501
+```
