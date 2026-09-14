@@ -1,0 +1,1 @@
+Extracted images will be generated here.
