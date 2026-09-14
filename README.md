@@ -69,7 +69,7 @@ vlm_ros/
 
 ---
 
-## セットアップ
+# セットアップ
 
 リポジトリを取得します。
 
@@ -86,11 +86,39 @@ chmod +x install.sh
 
 ./install.sh
 ```
+---
+## ソースコード取得
 
+最新版の `app.py` は社内Boxより配布しています。
+
+### ダウンロード
+
+[Box](https://suzukimotorcorporation.box.com/s/fayj4pkw596hmrv46v175ckv818wyvbl)から最新版の `app.py` をダウンロードしてください。
+
+### 配置
+
+ダウンロードした `app.py` をプロジェクトルートへ配置してください。
+
+```text
+vlm_rosbag_analyze/
+
+├── app.py
+├── install.sh
+├── run.sh
+├── requirements.txt
+
+├── models/
+├── rosbags/
+├── extracted_images/
+└── tmp/
+```
+
+### 更新方法
+
+新しいバージョンが公開された場合は、既存の `app.py` を最新版で上書きしてください。
 ---
 
 ## モデル配置
----
 
 ## VLMのダウンロード(Qwen3.5)
 
